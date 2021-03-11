@@ -3,8 +3,8 @@ body {
 }
 
 body.dark {
-  background: #343a40;
-  color: #fff;
+  background: lightblue;
+  color: gray;
 }
 
 body.dark hr {
