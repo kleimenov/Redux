@@ -1,6 +1,9 @@
 import "./styles.css";
 
 const counter = document.getElementById("counter");
+const add = document.getElementById('add')
+const sub = document.getElementById('sub')
+const colorScheme = document.getElementById('theme')
 
 let state = 0;
 
