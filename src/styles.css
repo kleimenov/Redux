@@ -1,11 +1,11 @@
 body {
   
-  background: lightyellow;
+  background: lightgray;
   transition: .2s all ease-in;
 }
 
 .card {
-  background: lightyellow;
+  background: lightgray;
 }
 
 body.dark {
@@ -39,6 +39,6 @@ body.dark .card {
 }
 
 .btn-custom {
-  background: lightyellow;
+  background: lightgray;
   border: 1px solid gray;
 }
