@@ -1,5 +1,6 @@
-import {createStore} from './createStore'
-import { rootReducer } from './redux/rootReducer';
+import { createStore } from "./createStore";
+import { rootReducer } from "./redux/rootReducer";
+import {increment, decrement} from './redux/actions'
 import "./styles.css";
 
 const counter = document.getElementById("counter");
@@ -9,23 +10,22 @@ const colorScheme = document.getElementById("theme");
 
 const store = createStore(rootReducer, 0);
 
-window.store = store
+window.store = store;
 
 add.addEventListener("click", () => {
-    store.dispatch({type: 'INCREMENT'})
+  store.dispatch(increment());
 });
 
 sub.addEventListener("click", () => {
-    store.dispatch({type: 'DECREMENT'})
+  store.dispatch(decrement());
 });
 
+store.subscribe(() => {
+  const state = store.getState();
+  counter.textContent = state;
+});
 
-store.subscribe(()=> {
-    const state = store.getState()
-    counter.textContent = state
-})
-
-store.dispatch({type: 'INIT_APPLICATION'})
+store.dispatch({ type: "INIT_APPLICATION" });
 
 colorScheme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
