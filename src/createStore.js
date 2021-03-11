@@ -1,4 +1,7 @@
 export const createStore = () => {
+
+    //implement closures
+
     return {
         dispatch() {
 
