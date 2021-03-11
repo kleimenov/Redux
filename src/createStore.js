@@ -1,7 +1,7 @@
-export const createStore = (rootReducer) => {
+export const createStore = (rootReducer, initialState) => {
   //implement closures and observer pattern and it will 
 
-  let state = {};
+  let state = rootReducer(initialState, {type: '__INIT__'});
   const subscribers = [];
 
   return {
