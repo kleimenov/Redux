@@ -25,6 +25,8 @@ store.subscribe(()=> {
     counter.textContent = state
 })
 
+store.dispatch({type: 'INIT_APPLICATION'})
+
 colorScheme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   colorScheme.classList.toggle("btn-info");
