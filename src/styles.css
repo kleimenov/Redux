@@ -1,5 +1,11 @@
 body {
+  
+  background: lightyellow;
   transition: .2s all ease-in;
+}
+
+.card {
+  background: lightyellow;
 }
 
 body.dark {
@@ -12,7 +18,7 @@ body.dark hr {
 }
 
 body.dark .card {
-  background: #343a40;
+  background: lightblue;
   border: 1px solid rgba(0,0,0,.875);
 }
 
@@ -20,4 +26,19 @@ body.dark .card {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.btn-info,
+.btn-info:active,
+.btn-info:not(:disabled):not(.disabled):active {
+  background: lightblue;
+  border: 1px solid gray;
+}
+.btn-info:hover{
+  background:rgba(173,216,230, 0.7);
+}
+
+.btn-custom {
+  background: lightyellow;
+  border: 1px solid gray;
 }
